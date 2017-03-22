@@ -1,6 +1,15 @@
 # PHP-FPM
 基於 php:7.1.3-fpm-alpine, 增加支援 pdo_mysql,mcrypt以及gd.
 
+**php.ini**
+- short_open_tag=On
+- memory_limit=2000M
+- error_reporting=E_ALL & ~E_DEPRECATED & ~E_NOTICE & ~E_STRICT
+- display_error=On
+- post_max_size=20000M
+- upload_max_filesize=20000M
+- max_file_uploads=200
+
 # MIT License
 ```
 The MIT License (MIT)
