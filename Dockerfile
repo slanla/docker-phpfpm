@@ -12,5 +12,7 @@ RUN apk add --no-cache libpng libjpeg-turbo freetype-dev libpng-dev libjpeg-turb
     && docker-php-ext-install -j${NPROC} gd \
     && apk del --no-cache freetype-dev libpng-dev libjpeg-turbo-dev
 
+COPY conf.d/php.ini /usr/local/etc/php/conf.d
+
 EXPOSE 9000
 CMD ["php-fpm"]
