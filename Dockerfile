@@ -1,6 +1,6 @@
 FROM php:7.1.3-fpm-alpine
 MAINTAINER slanla
-RUN apk add --no-cache libpng libjpeg-turbo freetype-dev libpng-dev libjpeg-turbo-dev libmcrypt-dev \
+RUN apk add --no-cache libpng libjpeg-turbo freetype-dev libpng-dev libjpeg-turbo-dev libmcrypt-dev zip \
     && docker-php-ext-configure gd \
         --with-gd \
         --with-freetype-dir=/usr/include/ \
